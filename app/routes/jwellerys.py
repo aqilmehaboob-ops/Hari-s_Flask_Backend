@@ -40,8 +40,6 @@ def create_jwellery():
         db.session.commit()
         return{"message": "Product already exists inventory updated"}, 200
 
-
-    
     jwellerys = Jwellerys(
         type=type,
         price=price,
@@ -70,6 +68,27 @@ def all_jwellery():
             "price": jwellery.price,
             "code": jwellery.code,
             "quantity": jwellery.quantity
+        })
+
+    return {"data": lst}, 200
+
+@jwellerys.route("/jwellerys/filter", methods=['GET'])
+def filter_jwellerys():
+    type = request.args.get("type")
+
+    if not type:
+        return {"error": "Invalid data"}, 400
+
+    item = Jwellerys.query.filter_by(type=type).all()
+
+    lst = []
+
+    for i in item:
+        lst.append({
+            "type": i.type,
+            "price": i.price,
+            "code": i.code,
+            "quantity": i.quantity
         })
 
     return {"data": lst}, 200
