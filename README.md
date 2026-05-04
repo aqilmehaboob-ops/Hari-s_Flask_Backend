@@ -27,17 +27,20 @@ Python • Flask • SQLAlchemy • JWT • SQLite • REST API
 |--------|-------|-------------|
 | GET | /jwellerys | Get all products |
 | POST | /jwellerys | Add new product (Admin only) |
+| GET | /jwellerys/filter?type=ring | Filter by type |
 
 ### Cart
 | Method | Route | Description |
 |--------|-------|-------------|
 | POST | /cart | Add item to cart |
 | DELETE | /cart/<jwellery_id> | Remove item from cart |
+| GET | /cart | View cart items |
 
 ### Orders
 | Method | Route | Description |
 |--------|-------|-------------|
 | POST | /orders | Place an order |
+| GET | /orders | View my orders |
 
 ## Setup
 
