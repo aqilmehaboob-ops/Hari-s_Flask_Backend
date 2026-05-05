@@ -30,6 +30,6 @@ def create_app():
 
     @app.route("/")
     def home():
-        {"message": "API is live"}
+        return {"message": "API is live"}
 
     return app
