@@ -43,7 +43,8 @@ def view_cart():
 
     lst = []
     for item in items:
-        jwellery = Jwellerys.query.filter_by(id=item.jwellery_id).first()
+        jwellery = Jwellerys.query.filter_by(id=item.jwellerys_id).first_or_404()
+
         lst.append({
             "type": jwellery.type,
             "code": jwellery.code,
