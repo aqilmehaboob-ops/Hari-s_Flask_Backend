@@ -1,7 +1,8 @@
 # Buildivine Store - Backend API
 
-A complete e-commerce backend for Buildivine Store built with Flask.
-Handles jewellery inventory, user authentication, cart management, and order processing.
+A complete e-commerce backend built for a real client - Buildivine Jewellery Store. Built with Flask and deployed on Render.
+
+**Live API:** https://buildivine-store-api.onrender.com
 
 ## Tech Stack
 Python • Flask • SQLAlchemy • JWT • SQLite • REST API
